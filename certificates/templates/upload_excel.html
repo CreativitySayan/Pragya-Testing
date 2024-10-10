@@ -1,0 +1,17 @@
+<!-- certificates/templates/upload_excel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Excel File</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Upload Excel File</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="excel_file" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
